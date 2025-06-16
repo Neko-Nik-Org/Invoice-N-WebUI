@@ -1,14 +1,17 @@
 
 import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
 
 function App() {
- 
-
   return (
     <>
-    <div className='bg-cyan-500 text-center text-white text-2xl font-bold p-4'>
-      Welcome to N invoice
-    </div>
+      <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
+        <Header />
+        <HomePage />
+        <Footer />
+      </div>
     </>
   )
 }
