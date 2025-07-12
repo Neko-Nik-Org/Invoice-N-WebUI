@@ -1,6 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+
+  const navigate = useNavigate();
+
+  const onHandleClick =()=>{
+    navigate('/login')
+  }
+
   return (
     <main className="container mx-auto px-4 py-12">
       <div className=" mx-auto bg-white rounded-lg shadow-xl p-8">
@@ -12,7 +20,7 @@ const HomePage = () => {
         </p>
         
         <div className="flex justify-center mt-8">
-          <button className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-6 rounded-md transition duration-300 mr-4">
+          <button className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-6 rounded-md transition duration-300 mr-4" onClick={onHandleClick}>
             Create Invoice
           </button>
           <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-md transition duration-300">
